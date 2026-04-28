@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Indian Election Process Assistant — Learn about voter registration, election timelines, voting process, EVM, and more.">
+  <title>Indian Election Assistant — Your Guide to Democracy</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 12l3 3 5-5"/></svg>
+        </span>
+        <span class="logo-text">ElectionGuide<span class="logo-dot">.</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#guide" class="nav-link">Guide</a></li>
+        <li><a href="#quiz" class="nav-link">Quiz</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-badge">India's Election Process</span>
+      <h1 class="hero-title">Your Guide to <span class="gradient-text">Indian Democracy</span></h1>
+      <p class="hero-subtitle">Understand every step of the election process — from voter registration to result declaration — in an interactive, easy-to-follow way.</p>
+      <div class="hero-actions">
+        <a href="#timeline" class="btn btn-primary" id="heroExploreBtn">
+          <span>Explore Timeline</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="btn btn-secondary" id="heroAskBtn">
+          <span>Ask a Question</span>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-target="543">0</span>
+          <span class="stat-label">Constituencies</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="970">0</span>
+          <span class="stat-label">Million Voters</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="7">0</span>
+          <span class="stat-label">Phases (2024)</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="75">0</span>
+          <span class="stat-label">Years of Democracy</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero-voting.png" alt="Person casting vote at a ballot box" />
+    </div>
+  </section>
+
+  <!-- TIMELINE SECTION -->
+  <section class="section timeline-section" id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Step by Step</span>
+        <h2 class="section-title">Election <span class="gradient-text">Timeline</span></h2>
+        <p class="section-subtitle">Follow the complete journey of an Indian general election — from announcement to government formation.</p>
+      </div>
+      <div class="timeline" id="timelineContainer">
+        <!-- Rendered by timeline.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE SECTION -->
+  <section class="section guide-section" id="guide">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Detailed Guide</span>
+        <h2 class="section-title">Everything You <span class="gradient-text">Need to Know</span></h2>
+        <p class="section-subtitle">Tap any card to dive deeper into each aspect of the election process.</p>
+      </div>
+      <div class="guide-grid">
+        <!-- Card 1 -->
+        <div class="guide-card" data-topic="registration">
+          <div class="guide-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 14l2 2 4-4"/></svg>
+          </div>
+          <h3>Voter Registration</h3>
+          <p>Learn how to register as a voter, required documents, and online/offline methods.</p>
+          <div class="guide-card-details">
+            <h4>How to Register</h4>
+            <ul>
+              <li><strong>Online:</strong> Visit voters.eci.gov.in - Fill Form 6</li>
+              <li><strong>App:</strong> Download Voter Helpline App</li>
+              <li><strong>Offline:</strong> Visit nearest Electoral Registration Office</li>
+            </ul>
+            <h4>Documents Needed</h4>
+            <ul>
+              <li>Age proof (birth certificate, Class 10 marksheet)</li>
+              <li>Address proof (Aadhaar, ration card, utility bill)</li>
+              <li>Passport-size photograph</li>
+            </ul>
+            <p class="guide-tip">Tip: Processing takes 15-30 days. Apply well before elections!</p>
+          </div>
+          <span class="guide-card-toggle">Tap to learn more</span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="guide-card" data-topic="eligibility">
+          <div class="guide-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          </div>
+          <h3>Who Can Vote?</h3>
+          <p>Eligibility criteria, special provisions for NRIs, service voters, and persons with disabilities.</p>
+          <div class="guide-card-details">
+            <h4>Basic Requirements</h4>
+            <ul>
+              <li>Indian citizen aged <strong>18+</strong></li>
+              <li>Resident of the constituency</li>
+              <li>Not disqualified by law</li>
+            </ul>
+            <h4>Special Categories</h4>
+            <ul>
+              <li><strong>NRIs:</strong> Can register as overseas electors</li>
+              <li><strong>Armed Forces:</strong> Vote via postal ballot</li>
+              <li><strong>PwD:</strong> Assistance available at booths</li>
+            </ul>
+          </div>
+          <span class="guide-card-toggle">Tap to learn more</span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="guide-card" data-topic="evm">
+          <div class="guide-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><circle cx="8" cy="10" r="1" fill="var(--amber)"/><circle cx="12" cy="10" r="1" fill="var(--amber)"/><circle cx="16" cy="10" r="1" fill="var(--amber)"/></svg>
+          </div>
+          <h3>EVM & VVPAT</h3>
+          <p>How Electronic Voting Machines work, security features, and the paper trail system.</p>
+          <div class="guide-card-details">
+            <h4>EVM Components</h4>
+            <ul>
+              <li><strong>Control Unit:</strong> With presiding officer</li>
+              <li><strong>Ballot Unit:</strong> Voter presses candidate button</li>
+              <li><strong>VVPAT:</strong> Prints paper slip (visible 7 sec)</li>
+            </ul>
+            <h4>Security Features</h4>
+            <ul>
+              <li>No internet, WiFi, or Bluetooth</li>
+              <li>One-time programmable chip</li>
+              <li>Randomized booth allocation</li>
+              <li>Mock poll before voting begins</li>
+            </ul>
+          </div>
+          <span class="guide-card-toggle">Tap to learn more</span>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="guide-card" data-topic="votingday">
+          <div class="guide-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg>
+          </div>
+          <h3>Voting Day</h3>
+          <p>Step-by-step guide for what happens at the polling station on election day.</p>
+          <div class="guide-card-details">
+            <h4>At the Polling Station</h4>
+            <ol>
+              <li>Queue up in the voter line</li>
+              <li>Show Voter ID for verification</li>
+              <li>Indelible ink on left index finger</li>
+              <li>Enter screened compartment</li>
+              <li>Press button next to your candidate</li>
+              <li>Verify VVPAT slip (7 seconds)</li>
+              <li>Exit the polling station</li>
+            </ol>
+            <h4>Remember</h4>
+            <ul>
+              <li>No phones inside voting compartment</li>
+              <li>Voting hours: 7 AM - 6 PM</li>
+              <li>Voting is completely FREE</li>
+            </ul>
+          </div>
+          <span class="guide-card-toggle">Tap to learn more</span>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="guide-card" data-topic="mcc">
+          <div class="guide-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><path d="M9 13h6M9 17h4"/></svg>
+          </div>
+          <h3>Model Code of Conduct</h3>
+          <p>Rules that political parties and candidates must follow during election season.</p>
+          <div class="guide-card-details">
+            <h4>Key Rules</h4>
+            <ul>
+              <li>No new government schemes after announcement</li>
+              <li>No misuse of government resources</li>
+              <li>No appeals to caste or religion</li>
+              <li>Campaign silence 48 hours before polling</li>
+              <li>No paid news or fake information</li>
+            </ul>
+            <h4>Enforcement</h4>
+            <p>ECI monitors via flying squads, surveillance teams, and social media monitoring cells.</p>
+          </div>
+          <span class="guide-card-toggle">Tap to learn more</span>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="guide-card" data-topic="results">
+          <div class="guide-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3>Results & Counting</h3>
+          <p>How votes are counted, results declared, and government formation happens.</p>
+          <div class="guide-card-details">
+            <h4>Counting Process</h4>
+            <ol>
+              <li>Postal ballots counted first</li>
+              <li>EVM results — round by round</li>
+              <li>VVPAT verification (5 random booths)</li>
+              <li>Real-time trends on ECI website</li>
+              <li>Final result by Returning Officer</li>
+            </ol>
+            <h4>Key Numbers</h4>
+            <ul>
+              <li><strong>272 seats</strong> = Majority in Lok Sabha</li>
+              <li><strong>FPTP:</strong> Highest votes wins (no runoff)</li>
+            </ul>
+          </div>
+          <span class="guide-card-toggle">Tap to learn more</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ SECTION -->
+  <section class="section quiz-section" id="quiz">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Test Yourself</span>
+        <h2 class="section-title">Election <span class="gradient-text">Knowledge Quiz</span></h2>
+        <p class="section-subtitle">How much do you know about Indian elections? Take this quick quiz to find out!</p>
+      </div>
+      <div class="quiz-container" id="quizContainer">
+        <!-- Rendered by quiz.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Common Questions</span>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q1">
+            <span>What is the minimum age to vote in India?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>You must be <strong>18 years or older</strong> as of January 1 of the qualifying year. For example, if elections are in 2024, you must have turned 18 on or before January 1, 2024.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q2">
+            <span>Can I vote without a Voter ID card?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! While the EPIC (Voter ID) card is preferred, you can use any of <strong>12 alternative photo IDs</strong> including Aadhaar card, passport, PAN card, driving license, or government-issued photo ID.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q3">
+            <span>What is NOTA and does it affect election results?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>NOTA (None of the Above) lets you reject all candidates. However, even if NOTA gets the most votes, the candidate with the <strong>highest votes among regular candidates still wins</strong>. NOTA votes are counted separately as a democratic expression of dissatisfaction.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q4">
+            <span>How are EVMs different from paper ballots?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>EVMs are <strong>electronic devices</strong> that record votes digitally. They replaced paper ballots in India to reduce booth capturing, invalid votes, and counting time. Each EVM is a <strong>standalone device</strong> with no internet connectivity, ensuring security. VVPAT provides a paper trail for verification.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q5">
+            <span>Can NRIs vote in Indian elections?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! NRIs can register as <strong>overseas electors</strong> using Form 6A. However, they currently need to <strong>visit their assigned polling station in person</strong> to cast their vote. Postal ballot facility for NRIs is being explored.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--coral-light)" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 12l3 3 5-5"/></svg>
+          <span class="logo-text">ElectionGuide<span class="logo-dot">.</span></span>
+          <p>Making democracy accessible, one voter at a time.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="https://voters.eci.gov.in" target="_blank">Voter Registration</a>
+          <a href="https://eci.gov.in" target="_blank">Election Commission</a>
+          <a href="https://nvsp.in" target="_blank">Check Voter Status</a>
+        </div>
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <a href="#timeline">Election Timeline</a>
+          <a href="#guide">Voter Guide</a>
+          <a href="#quiz">Take Quiz</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Built for Indian Democracy | Educational purposes only</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CHAT WIDGET -->
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-fab" id="chatFab" aria-label="Open chat assistant">
+      <span class="chat-fab-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      </span>
+      <span class="chat-fab-close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </span>
+      <span class="chat-fab-pulse"></span>
+    </button>
+    <div class="chat-panel" id="chatPanel">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <span class="chat-avatar">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 12l3 3 5-5"/></svg>
+          </span>
+          <div>
+            <h3>Election Assistant</h3>
+            <span class="chat-status">Online</span>
+          </div>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Close chat">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages rendered by chat.js -->
+      </div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button class="suggestion-btn" data-query="How do I register to vote?">Register to vote</button>
+        <button class="suggestion-btn" data-query="What is the election process?">Election process</button>
+        <button class="suggestion-btn" data-query="How does EVM work?">EVM & VVPAT</button>
+        <button class="suggestion-btn" data-query="What happens on voting day?">Voting day</button>
+      </div>
+      <form class="chat-input-form" id="chatForm">
+        <input type="text" id="chatInput" placeholder="Ask about Indian elections..." autocomplete="off" aria-label="Type your question">
+        <button type="submit" id="chatSubmitBtn" aria-label="Send message">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>
